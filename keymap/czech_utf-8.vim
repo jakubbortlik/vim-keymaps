@@ -4,6 +4,10 @@
 let b:keymap_name = "czech"
 
 loadkey
+-	=
+_	%
+–	\
+—	¨
 0	é
 9	í
 8	á
