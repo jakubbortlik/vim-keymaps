@@ -20,7 +20,8 @@ default  partial alphanumeric_keys modifier_keys
 partial alphanumeric_keys
 xkb_symbols "basic" {
 
-    name[Group1]= "English (US - Alternative AltGr mappings)";
+//    name[Group1]= "English (US - Alternative AltGr mappings)";
+    name[Group1]= "English (US)";
 
     key <TLDE> { [     grave, asciitilde,    dead_grave,       dead_tilde ] };
     key <AE01> { [	   1,     exclam,    exclamdown,      onesuperior ] };
@@ -54,10 +55,9 @@ xkb_symbols "basic" {
     key <AC03> { [	   d,          D,           eth,              ETH ] };
     key <AC04> { [	   f,          F,         U03C6,            U03A6 ] };
     key <AC05> { [	   g,          G,         U0261,                G ] };
-    key <AC06> { [	   h,          H,             h,                H ] };
+    key <AC06> { [	   h,          H,         U02b0,                H ] };
     key <AC07> { [	   j,          J,        oslash,         Ooblique ] };
     key <AC08> { [	   k,          K,            oe,               OE ] };
-
     key <AC09> { [	   l,          L,       lstroke,          Lstroke ] };
     key <AC10> { [ semicolon,      colon,     paragraph,           degree ] };
     key <AC11> { [apostrophe,   quotedbl,    dead_acute,   dead_diaeresis ] };
