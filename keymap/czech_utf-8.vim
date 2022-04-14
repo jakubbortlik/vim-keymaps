@@ -1,12 +1,12 @@
-" Maintainer: Jakub Bortlík <jakub.bortlik@gmail.com>
-" Last Changed: 11 May 2016
+" Maintainer: Jakub Bortlík <jakub.bortlik@proton.me>
+" Last Changed: 14 Apr 2022
 
 let b:keymap_name = "czech"
 
 loadkey
 -	=
 _	%
-–	\
+–	\\
 —	¨
 0	é
 9	í

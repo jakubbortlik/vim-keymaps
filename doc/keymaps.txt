@@ -1,0 +1,57 @@
+*keymaps.txt*  Plugin for keyboard layout switching
+
+Author:  Jakub Bortlík <jakub.bortlik@proton.me>
+License: Same terms as Vim itself (see |license|)
+
+INTRODUCTION					*keymaps* *vim-keymaps*
+
+This plugin enables convenient layout switching possibilities in |normal-mode|
+and |insert-mode|. The list of keymaps is set in `g:keymaps`. The first entry
+is an empty string, i.e., no keymap is used. The default keymaps are:
+
+`g:keymaps = ['', 'czech', 'russian-jcukenwin', 'ipa']`
+
+MAPPINGS					*keymaps-mappings*
+
+This plugin provides the following |normal-mode| mappings for switching
+keymaps:
+
+						*keymaps-ckj*
+ckj		Cycle to the next keymap
+
+						*keymaps-ckk*
+ckk		Cycle to the previous keymap
+
+This plugin provides the following |insert-mode| mappings for switching
+keymaps:
+
+						*keymaps-i_CTRL-k-j*
+<C-k-j>		Cycle to the next keymap
+
+						*keymaps-i_CTRL-k-k*
+<C-k-k>		Cycle to the previous keymap
+
+						*keymaps_cl*
+cl		Show the list of keymaps
+
+Russian keymap/keyboard                         *russiankeymap*
+-----------------------
+
+o  This is the keyboard mapping of the standard russian-jcukenwin Vim layout
+   that can be activated with `setlocal keymap=russian-jcukenwin`
+
++---------------------------------------------------------------------+
+|!   |"   |№   |;   |%   |:   |?   |*   |(   |)   |_   |+   ||   |Ё   |
+|1 1 |2 2 |3 3 |4 4 |5 5 |6 6 |7 7 |8 8 |9 9 |0 0 |- - |= = |\ \ |` ё |
++---------------------------------------------------------------------+
+     |Й   |Ц   |У   |К   |Е   |Н   |Г   |Ш   |Щ   |З   |Х   |Ъ   |
+     |q й |w ц |e у |r к |t е |y н |u г |i ш |o щ |p з |[ х |] ъ |
+     +-----------------------------------------------------------+
+       |Ф   |Ы   |В   |А   |П   |Р   |О   |Л   |Д   |Ж   |Э   |
+       |a ф |s ы |d в |f а |g п |h р |j о |k л |l д |; ж |' э |
+       +------------------------------------------------------+
+         |Я   |Ч   |С   |М   |И   |Т   |Ь   |Б   |Ю   |,   |
+         |z я |x ч |c с |v м |b и |n т |m ь |, б |. ю |/ . |
+         +-------------------------------------------------+
+
+ vim:tw=78:ts=8:noet:ft=help:norl:

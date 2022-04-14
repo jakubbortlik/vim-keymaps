@@ -1,9 +1,9 @@
-" Maintainer: Jakub Bortlik <jakub.bortlik@gmail.com>
-" Last Changed: Wed 11 May 2016
+" Maintainer: Jakub Bortlík <jakub.bortlik@proton.me>
+" Last Changed: 14 Apr 2022
 
 let b:keymap_name = "ipa"
 
-loadkey
+loadkeymap
 `	˞
 1	ɨ
 2	ø

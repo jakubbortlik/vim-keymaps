@@ -1,0 +1,9 @@
+keymaps	keymaps.txt	/*keymaps*
+keymaps-ckj	keymaps.txt	/*keymaps-ckj*
+keymaps-ckk	keymaps.txt	/*keymaps-ckk*
+keymaps-i_CTRL-k-j	keymaps.txt	/*keymaps-i_CTRL-k-j*
+keymaps-i_CTRL-k-k	keymaps.txt	/*keymaps-i_CTRL-k-k*
+keymaps-mappings	keymaps.txt	/*keymaps-mappings*
+keymaps.txt	keymaps.txt	/*keymaps.txt*
+russiankeymap	keymaps.txt	/*russiankeymap*
+vim-keymaps	keymaps.txt	/*vim-keymaps*
