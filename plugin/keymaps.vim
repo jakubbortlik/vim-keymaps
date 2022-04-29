@@ -8,7 +8,7 @@ if exists("b:did_vimkeymaps")
 endif
 let b:did_vimkeymaps = 1
 
-let g:keymaps = ['', 'czech', 'russian-jcukenwin', 'ipa']
+let g:keymaps = ['', 'czech', 'russian', 'ipa']
 let g:active_keymap_index = 0
 
 function! CycleKeymaps(direction)

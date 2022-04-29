@@ -1,7 +1,8 @@
 Custom vim-keymaps
 ==================
 These keymaps make it possible to use a Czech keyboard layout and an IPA layout
-in non-normal modes of Vim.
+in non-normal modes of Vim. Apart from that, it provieds a modified version of
+the russian-jcuken keymap.
 
 Mappings 
 ========

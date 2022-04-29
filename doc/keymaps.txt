@@ -9,7 +9,7 @@ This plugin enables convenient layout switching possibilities in |normal-mode|
 and |insert-mode|. The list of keymaps is set in `g:keymaps`. The first entry
 is an empty string, i.e., no keymap is used. The default keymaps are:
 
-`g:keymaps = ['', 'czech', 'russian-jcukenwin', 'ipa']`
+`g:keymaps = ['', 'czech', 'russian', 'ipa']`
 
 MAPPINGS					*keymaps-mappings*
 
@@ -37,21 +37,25 @@ cl		Show the list of keymaps
 Russian keymap/keyboard                         *russiankeymap*
 -----------------------
 
-o  This is the keyboard mapping of the standard russian-jcukenwin Vim layout
-   that can be activated with `setlocal keymap=russian-jcukenwin`
+o  This is the keyboard mapping of the modified russian-jcuken Vim layout found in
+   this plugin that can be activated with `setlocal keymap=russian` . The
+   characters in the right lower corner of each rectangle can be typed with
+   Alt+Key on a standard English Keyboard. The characters in the right upper
+   corner can be typed with Alt+Shift+Key. The gray Latin characters are there
+   only for orientation purposes and cannot be typed with Alt+Key.
 
-+---------------------------------------------------------------------+
-|!   |"   |№   |;   |%   |:   |?   |*   |(   |)   |_   |+   ||   |Ё   |
-|1 1 |2 2 |3 3 |4 4 |5 5 |6 6 |7 7 |8 8 |9 9 |0 0 |- - |= = |\ \ |` ё |
-+---------------------------------------------------------------------+
-     |Й   |Ц   |У   |К   |Е   |Н   |Г   |Ш   |Щ   |З   |Х   |Ъ   |
-     |q й |w ц |e у |r к |t е |y н |u г |i ш |o щ |p з |[ х |] ъ |
-     +-----------------------------------------------------------+
-       |Ф   |Ы   |В   |А   |П   |Р   |О   |Л   |Д   |Ж   |Э   |
-       |a ф |s ы |d в |f а |g п |h р |j о |k л |l д |; ж |' э |
-       +------------------------------------------------------+
-         |Я   |Ч   |С   |М   |И   |Т   |Ь   |Б   |Ю   |,   |
-         |z я |x ч |c с |v м |b и |n т |m ь |, б |. ю |/ . |
-         +-------------------------------------------------+
++----------------------------------------------------------------+
+|Ё ~ |!   |"   |'   |*   |:   |,   |.   |;   |(   |)   |_   |+   |
+|ё ` |1 ! |2 @ |3 # |4 $ |5 % |6 ^ |7 & |8 * |9 ( |0 ) |- _ |= + |
++-------------------------------------------------------------------+
+        |Й   |Ц   |У   |К   |Е   |Н   |Г   |Ш   |Щ   |З   |Х { |Ъ } |
+        |й `q` |ц `w` |у `e` |к `r` |е `t` |н `y` |г `u` |ш `i` |щ `o` |з `p` |х [ |ъ ] |
+        +-------------------------------------------------------------+
+          |Ф   |Ы   |В   |А   |П   |Р   |О   |Л   |Д   |Ж : |Э " ||   |
+          |ф `a` |ы `s` |в `d` |а `f` |п `g` |р `h` |о `j` |л `k` |д `l` |ж ; |э ' |\   |
+          +-----------------------------------------------------------+
+            |Я   |Ч   |С   |М   |И   |Т   |Ь   |Б   |Ю   |?   |
+            |я `z` |ч `x` |с `c` |м `v` |и `b` |т `n` |ь `m` |б < |ю > |/   |
+            +-------------------------------------------------+
 
  vim:tw=78:ts=8:noet:ft=help:norl:
