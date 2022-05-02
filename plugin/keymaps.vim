@@ -35,10 +35,11 @@ command! KeymapsList call EchoKeymapsList()
 command! KeymapsForward call CycleKeymaps('forward')
 command! KeymapsBackward call CycleKeymaps('backward')
 
-nnoremap <silent> cl :KeymapsList<CR>
+nnoremap <silent> ckl :KeymapsList<CR>
 nnoremap <silent> ckj :KeymapsForward<CR>
 nnoremap <silent> ckk :KeymapsBackward<CR>
 
+inoremap <silent> <C-K><C-L> <C-o>:KeymapsList<CR>
 inoremap <silent> <C-K><C-J> <C-o>:KeymapsForward<CR>
 inoremap <silent> <C-K><C-K> <C-o>:KeymapsBackward<CR>
 

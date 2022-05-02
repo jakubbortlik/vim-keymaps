@@ -1,9 +1,9 @@
-" Vim Keymap file for russian characters, based on the 'jcuken' layout,
+" Vim Keymap file for russian characters, based on the 'jcukenwin' layout,
 " classical variant (compatible with XFree86 'ru' keymap)
 " Useful mainly with utf-8 but may work with other encodings.
 "
 " This version adds some Alt+Key and Alt+Shift+Key mappings to get characters
-" that are missing in russian-jcuken, most importantly "[]{}<>^%`~". In most
+" that are missing in russian-jcukenwin, most importantly "[]{}<>^%`~". In most
 " cases Alt+Key works like Shift+Key on an English keyboard. If both the shifted
 " and non-shifted English-keyboard characters are useful, then Alt+Key is
 " equivalent to the English base character and Alt+Shift+Key is equivalent to
@@ -86,12 +86,12 @@ m	ь	CYRILLIC SMALL LETTER SOFT SIGN
 .	ю	CYRILLIC SMALL LETTER YU
 z	я	CYRILLIC SMALL LETTER YA
 @	"
-#	'
-$	*
-%	:
-^	,
-&	.
-*	;
+#	№	NUMERO SIGN
+$	;
+^	:
+&	?
+/	.
+?	,
 
 "  Alt+Key simulates Shift+Key on English keyboards
 <A-1>	!
@@ -120,3 +120,5 @@ $	*
 <A-]>	]
 <A-{>	{
 <A-}>	}
+<A-/>	/
+<A-?>	?

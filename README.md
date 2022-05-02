@@ -2,7 +2,7 @@ Custom vim-keymaps
 ==================
 These keymaps make it possible to use a Czech keyboard layout and an IPA layout
 in non-normal modes of Vim. Apart from that, it provieds a modified version of
-the russian-jcuken keymap.
+the russian-jcukenwin keymap.
 
 Mappings 
 ========
@@ -11,15 +11,22 @@ The plugin provides the following normal-mode mappings:
 
 `ckj` - Cycle the keymaps forward
 `ckk` - Cycle the keymaps backward
+`ckl` - Show list of keymaps
 
 The plugin provides the following insert-mode mappings - hold the Control key
 and press two more keys after each other:
 
 `<C-k-j>` - Cycle the keymaps forward
 `<C-k-k>` - Cycle the keymaps backward
+`<C-k-l>` - Show list of keymaps
 
 The Czech and IPA keymaps work properly (i.e., allow the usage of AltGr+key)
-with a custom us_intl layout.
+with a custom us_intl layout (try running ```$ setxkbmap -layout us -variant
+intl```).
+
+The Russian keymap works properly if the Alt+Shift keys can be pressed together
+to modify a key (i.e., Alt+Shift don't have sideeffects like switching the
+keyboard layout on the OS side).
 
 Usage on GNU/Linux
 ==================
@@ -38,12 +45,9 @@ $ cp /usr/share/X11/xkb/symbols/us /usr/share/X11/xkb/symbols/us.bak
 $ cp ~/Downloads/xkb_symbols_us /usr/share/X11/xkb/symbols/us
 ```
 
-se your preferred way of installing plugins, e.g. with Vundle add this line to your vimrc:
+se your preferred way of installing plugins, e.g. with Plug add this line to your vimrc:
 ```
-Plugin 'jakubbortlik/vim-keymaps.git'
+Plug 'jakubbortlik/vim-keymaps.git'
 ```
 
-Running ```$ setxkbmap -layout us -variant intl``` in terminal and ```:set
-keymap=cs``` or ```:set keymap=ipa```, and hitting <Ctrl-6> in insert,
-command-line and search mode lets you insert the desired characters. See ```:h
-keymap``` for more info.
+See ```:h keymaps``` for more info.
