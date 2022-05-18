@@ -1,5 +1,5 @@
-" Vim filetype plugin
-" Last Change: 2022-04-14
+    " Vim filetype plugin
+      " Last Change: 2022-04-14
 " Maintainer: Jakub Bortlík <jakub.bortlik@proton.me>
 
 " Prevent duplicate loading
@@ -32,6 +32,15 @@ function! EchoKeymapsList()
     echo 'Available keymaps: [' . join(g:keymaps, ', ') . ']'
 endfunction
 
+function! RecordCmd()
+    " let g:last_cmdtype = getcmdtype()
+    let g:last_cmdline = getcmdline()
+    let g:last_cmdpos = getcmdpos()
+endfunction
+
+cmap <expr> <C-K><C-J> getcmdtype()=='/'?"<c-r><c-r>=RecordCmd()[-1]<cr><c-c>:KeymapsForward<cr>/<c-r><c-r>=g:last_cmdline<cr><c-r><c-r>=setcmdpos(g:last_cmdpos)[-1]<cr>":"<c-r><c-r>=RecordCmd()[-1]<cr><c-c>:KeymapsForward<cr>:<c-r><c-r>=g:last_cmdline<cr><c-r><c-r>=setcmdpos(g:last_cmdpos)[-1]<cr>"
+cmap <expr> <C-K><C-K> getcmdtype()=='/'?"<c-r><c-r>=RecordCmd()[-1]<cr><c-c>:KeymapsBackward<cr>/<c-r><c-r>=g:last_cmdline<cr><c-r><c-r>=setcmdpos(g:last_cmdpos)[-1]<cr>":"<c-r><c-r>=RecordCmd()[-1]<cr><c-c>:KeymapsBackward<cr>:<c-r><c-r>=g:last_cmdline<cr><c-r><c-r>=setcmdpos(g:last_cmdpos)[-1]<cr>"
+
 command! KeymapsList call EchoKeymapsList()
 command! KeymapsForward call CycleKeymaps('forward')
 command! KeymapsBackward call CycleKeymaps('backward')
@@ -44,4 +53,4 @@ inoremap <silent> <C-K><C-L> <C-o>:KeymapsList<CR>
 inoremap <silent> <C-K><C-J> <C-o>:KeymapsForward<CR>
 inoremap <silent> <C-K><C-K> <C-o>:KeymapsBackward<CR>
 
-" vim:set ft=vim et sw=4 sts=4:
+" vim:set ft=vim et sw=2 sts=2:
