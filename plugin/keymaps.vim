@@ -37,14 +37,8 @@ function! EchoKeymapsList()
     echo 'Available keymaps: [' . join(g:keymaps, ', ') . ']'
 endfunction
 
-function! RecordCmd()
-    " let g:last_cmdtype = getcmdtype()
-    let g:last_cmdline = getcmdline()
-    let g:last_cmdpos = getcmdpos()
-endfunction
-
-cmap <expr> <C-K><C-J>  execute('KeymapsForward')
-cmap <expr> <C-K><C-K>  execute('KeymapsBackward')
+cmap <expr> <C-K><C-J> execute('KeymapsForward')
+cmap <expr> <C-K><C-K> execute('KeymapsBackward')
 
 command! KeymapsList call EchoKeymapsList()
 command! KeymapsForward call CycleKeymaps('forward')
