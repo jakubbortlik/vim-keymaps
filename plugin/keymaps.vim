@@ -51,5 +51,3 @@ nnoremap <silent> ckk :KeymapsBackward<CR>
 inoremap <silent> <C-K><C-L> <C-o>:KeymapsList<CR>
 inoremap <silent> <C-K><C-J> <C-o>:KeymapsForward<CR>
 inoremap <silent> <C-K><C-K> <C-o>:KeymapsBackward<CR>
-
-" vim:set ft=vim et sw=2 sts=2:
