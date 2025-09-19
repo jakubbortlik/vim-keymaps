@@ -26,6 +26,11 @@ function! CycleKeymaps(direction)
         endif
     endif
     let &l:keymap=g:keymaps[g:active_keymap_index]
+    try
+        call luaeval('require("lualine").refresh({force=true, scope="window"})')
+    catch
+        " Don't fail if lualine is not intalled
+    endtry
 endfunction
 
 function! EchoKeymapsList()
