@@ -1,9 +1,9 @@
-    " Vim filetype plugin
-      " Last Change: 2022-04-14
-" Maintainer: Jakub Bortlík <jakub.bortlik@proton.me>
+" Vim filetype plugin
+" Last Change: 2022-04-14
+" Maintainer: Jakub Bortlik <jakub.bortlik@proton.me>
 
 " Prevent duplicate loading
-if exists("b:did_vimkeymaps")
+if exists('b:did_vimkeymaps')
     finish
 endif
 let b:did_vimkeymaps = 1
@@ -14,12 +14,12 @@ let g:active_keymap_index = 0
 
 function! CycleKeymaps(direction)
     let g:last_keymap = len(g:keymaps) - 1
-    if a:direction == 'forward'
+    if a:direction ==# 'forward'
         let g:active_keymap_index += 1
         if g:active_keymap_index > g:last_keymap
             let g:active_keymap_index = 0
         endif
-    elseif a:direction == 'backward'
+    elseif a:direction ==# 'backward'
         let g:active_keymap_index -= 1
         if g:active_keymap_index < 0
             let g:active_keymap_index = g:last_keymap
