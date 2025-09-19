@@ -38,8 +38,8 @@ function! RecordCmd()
     let g:last_cmdpos = getcmdpos()
 endfunction
 
-cmap <expr> <C-K><C-J> getcmdtype()=='/'?"<c-r><c-r>=RecordCmd()[-1]<cr><c-c>:KeymapsForward<cr>/<c-r><c-r>=g:last_cmdline<cr><c-r><c-r>=setcmdpos(g:last_cmdpos)[-1]<cr>":"<c-r><c-r>=RecordCmd()[-1]<cr><c-c>:KeymapsForward<cr>:<c-r><c-r>=g:last_cmdline<cr><c-r><c-r>=setcmdpos(g:last_cmdpos)[-1]<cr>"
-cmap <expr> <C-K><C-K> getcmdtype()=='/'?"<c-r><c-r>=RecordCmd()[-1]<cr><c-c>:KeymapsBackward<cr>/<c-r><c-r>=g:last_cmdline<cr><c-r><c-r>=setcmdpos(g:last_cmdpos)[-1]<cr>":"<c-r><c-r>=RecordCmd()[-1]<cr><c-c>:KeymapsBackward<cr>:<c-r><c-r>=g:last_cmdline<cr><c-r><c-r>=setcmdpos(g:last_cmdpos)[-1]<cr>"
+cmap <expr> <C-K><C-J>  execute('KeymapsForward')
+cmap <expr> <C-K><C-K>  execute('KeymapsBackward')
 
 command! KeymapsList call EchoKeymapsList()
 command! KeymapsForward call CycleKeymaps('forward')
